@@ -48,7 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Files\utterances.json" />
+    <None Include="Files\Conversation.json" />
+    <None Include="Files\Explanation.json" />
+    <None Include="Files\Match.json" />
+    <None Include="Files\Settings.json" />
+    <None Include="Files\Parent.json" />
+    <None Include="Files\Store.json" />
+    <None Include="Files\writeTo.log" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

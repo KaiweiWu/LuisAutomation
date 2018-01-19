@@ -110,6 +110,24 @@ namespace LuisAutomation
         private static void Format(string input_file)
         {
             string requestBody = File.ReadAllText("../../Files/" + input_file);
+
+            StreamWriter file = new StreamWriter("../../Files/" + "Parent.json");
+
+            using (StringReader reader = new StringReader(requestBody))
+            {
+                using (file)
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        line = line.Substring(line.IndexOf(":") + 1);
+                        file.WriteLine(line);
+                        Console.WriteLine(line);
+                        Console.ReadLine();
+                    }
+                }
+            }
+            
         }
 
         async static Task Train(string input_file)
